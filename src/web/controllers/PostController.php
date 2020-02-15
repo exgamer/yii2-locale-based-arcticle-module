@@ -7,6 +7,10 @@ use concepture\yii2logic\controllers\web\Controller;
 use concepture\yii2logic\actions\web\StatusChangeAction;
 use kamaelkz\yii2cdnuploader\actions\web\ImageDeleteAction;
 use kamaelkz\yii2cdnuploader\actions\web\ImageUploadAction;
+use concepture\yii2handbook\actions\PositionSortIndexAction;
+use kamaelkz\yii2admin\v1\actions\EditableColumnAction;
+use kamaelkz\yii2admin\v1\actions\SortAction;
+use concepture\yii2handbook\services\EntityTypePositionSortService;
 
 /**
  * Class PostController
@@ -19,7 +23,11 @@ class PostController extends Controller
     {
         return [
             [
-                'actions' => ['index', 'create', 'update', 'delete', 'status-change', 'image-upload', 'image-delete'],
+                'actions' => ['index', 'create', 'update', 'delete', 'status-change', 'image-upload', 'image-delete',
+                    PositionSortIndexAction::actionName(),
+                    EditableColumnAction::actionName(),
+                    SortAction::actionName(),
+                ],
                 'allow' => true,
                 'roles' => [UserRoleEnum::ADMIN],
             ]
@@ -35,6 +43,23 @@ class PostController extends Controller
             'status-change' => StatusChangeAction::class,
             'image-upload' => ImageUploadAction::class,
             'image-delete' => ImageDeleteAction::class,
+            PositionSortIndexAction::actionName() => [
+                'class' => PositionSortIndexAction::class,
+                'entityColumns' => [
+                    'id',
+                    'name',
+                    'seo_name',
+                ],
+                'labelColumn' => 'name',
+            ],
+            EditableColumnAction::actionName() => [
+                'class' => EditableColumnAction::class,
+                'serviceClass' => EntityTypePositionSortService::class
+            ],
+            SortAction::actionName() => [
+                'class' => SortAction::class,
+                'serviceClass' => EntityTypePositionSortService::class
+            ],
         ]);
     }
 }

@@ -10,6 +10,11 @@ use yii\helpers\Url;
 
 $this->setTitle($searchModel::label());
 $this->pushBreadcrumbs($this->title);
+$this->viewHelper()->pushPageHeader(
+    [\concepture\yii2handbook\actions\PositionSortIndexAction::actionName()],
+    Yii::t('yii2admin', 'Сортировка'),
+    'icon-sort'
+);
 $this->viewHelper()->pushPageHeader();
 ?>
 <?php Pjax::begin(); ?>

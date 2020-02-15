@@ -218,9 +218,9 @@ $saveButton = Html::submitButton(
                     )
                 ?>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <?= $form->field($model, 'sort')->textInput(['maxlength' => true]) ?>
-            </div>
+<!--            <div class="col-lg-6 col-md-6 col-sm-12">-->
+<!--                --><?//= $form->field($model, 'sort')->textInput(['maxlength' => true]) ?>
+<!--            </div>-->
         </div>
     </div>
 </div>
