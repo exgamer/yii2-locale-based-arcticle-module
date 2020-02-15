@@ -35,7 +35,6 @@ class PostCategoryForm extends Form
             [
                 [
                     'title',
-                    'locale_id',
                 ],
                 'required'
             ],

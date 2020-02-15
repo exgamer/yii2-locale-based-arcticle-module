@@ -27,13 +27,6 @@ class PostForm extends BaseForm
     public $sort;
     public $status = 0;
 
-    /**
-     * Выбранные теги
-     *
-     * @var array
-     */
-    public $selectedTags = [];
-
     public $categoryParents = [];
 
     /**
@@ -46,7 +39,6 @@ class PostForm extends BaseForm
                 [
                     'title',
                     'content',
-                    'locale_id',
                     'category_id',
                 ],
                 'required'
