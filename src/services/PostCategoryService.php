@@ -15,6 +15,7 @@ use concepture\yii2logic\services\traits\TreeReadTrait;
 use concepture\yii2handbook\services\traits\ModifySupportTrait as HandbookModifySupportTrait;
 use concepture\yii2handbook\services\traits\ReadSupportTrait as HandbookReadSupportTrait;
 use concepture\yii2user\services\traits\UserSupportTrait;
+use concepture\yii2handbook\services\traits\EntityTypeSupportTrait;
 
 /**
  * Class PostCategoryService
@@ -30,6 +31,7 @@ class PostCategoryService extends Service
     use HandbookModifySupportTrait;
     use HandbookReadSupportTrait;
     use UserSupportTrait;
+    use EntityTypeSupportTrait;
 
     protected function beforeCreate(Model $form)
     {

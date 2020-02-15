@@ -15,6 +15,7 @@ use concepture\yii2logic\enum\IsDeletedEnum;
 use concepture\yii2handbook\services\traits\ModifySupportTrait as HandbookModifySupportTrait;
 use concepture\yii2handbook\services\traits\ReadSupportTrait as HandbookReadSupportTrait;
 use concepture\yii2user\services\traits\UserSupportTrait;
+use concepture\yii2handbook\services\traits\EntityTypeSupportTrait;
 
 /**
  * Class PostService
@@ -30,6 +31,7 @@ class PostService extends Service
     use HandbookReadSupportTrait;
     use UserSupportTrait;
     use ViewsTrait;
+    use EntityTypeSupportTrait;
 
     protected function beforeCreate(Model $form)
     {
