@@ -29,6 +29,6 @@ class m191005_101557_post_localization extends Migration
         $this->addIndex(['entity_id']);
         $this->addIndex(['locale_id']);
         $this->addForeign('entity_id', 'post','id');
-        $this->addForeign('locale_id', 'locale_id','id');
+        $this->addForeign('locale_id', 'locale','id');
     }
 }
