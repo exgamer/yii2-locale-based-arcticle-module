@@ -23,7 +23,8 @@ class m191005_101557_post_localization extends Migration
             'seo_description' => $this->string(175),
             'seo_keywords' => $this->string(175),
             'title' => $this->string(1024)->notNull(),
-            'content' => $this->text()->notNull()
+            'content' => $this->text()->notNull(),
+            'default' => $this->smallInteger()->defaultValue(0),
         ]);
         $this->addPK(['entity_id', 'locale_id'], true);
         $this->addIndex(['entity_id']);
