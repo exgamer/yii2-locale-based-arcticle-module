@@ -3,7 +3,7 @@
 namespace concepture\yii2article\web\controllers;
 
 use concepture\yii2user\enum\UserRoleEnum;
-use concepture\yii2logic\controllers\web\localized\tree\Controller;
+use concepture\yii2logic\controllers\web\tree\Controller;
 use kamaelkz\yii2cdnuploader\actions\web\ImageDeleteAction;
 use kamaelkz\yii2cdnuploader\actions\web\ImageUploadAction;
 use concepture\yii2logic\actions\web\v2\StatusChangeAction;
