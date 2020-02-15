@@ -47,7 +47,7 @@ class PostController extends Controller
                 'class' => PositionSortIndexAction::class,
                 'entityColumns' => [
                     'id',
-                    'name',
+                    'title',
                     'seo_name',
                 ],
                 'labelColumn' => 'name',
