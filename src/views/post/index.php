@@ -73,7 +73,7 @@ $this->viewHelper()->pushPageHeader();
 
                     return Html::a(
                         '<i class="icon-pencil6"></i>'. Yii::t('yii2admin', 'Редактировать'),
-                        ['update', 'id' => $model['id'], 'locale' => $model['locale']],
+                        ['update', 'id' => $model['id']],
                         [
                             'class' => 'dropdown-item',
                             'aria-label' => Yii::t('yii2admin', 'Редактировать'),
@@ -93,7 +93,7 @@ $this->viewHelper()->pushPageHeader();
 
                     return Html::a(
                         '<i class="icon-checkmark4"></i>'. Yii::t('yii2admin', 'Активировать'),
-                        ['status-change', 'id' => $model['id'], 'status' => StatusEnum::ACTIVE, 'locale' => $model['locale']],
+                        ['status-change', 'id' => $model['id'], 'status' => StatusEnum::ACTIVE],
                         [
                             'class' => 'admin-action dropdown-item',
                             'data-pjax-id' => 'list-pjax',
@@ -111,7 +111,7 @@ $this->viewHelper()->pushPageHeader();
                     }
                     return Html::a(
                         '<i class="icon-cross2"></i>'. Yii::t('yii2admin', 'Деактивировать'),
-                        ['status-change', 'id' => $model['id'], 'status' => StatusEnum::INACTIVE, 'locale' => $model['locale']],
+                        ['status-change', 'id' => $model['id'], 'status' => StatusEnum::INACTIVE],
                         [
                             'class' => 'admin-action dropdown-item',
                             'data-pjax-id' => 'list-pjax',
@@ -127,7 +127,7 @@ $this->viewHelper()->pushPageHeader();
 
                     return Html::a(
                         '<i class="icon-trash"></i>'. Yii::t('yii2admin', 'Удалить'),
-                        ['delete', 'id' => $model['id'], 'locale' => $model['locale']],
+                        ['delete', 'id' => $model['id']],
                         [
                             'class' => 'admin-action dropdown-item',
                             'data-pjax-id' => 'list-pjax',

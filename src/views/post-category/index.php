@@ -77,7 +77,7 @@ $this->viewHelper()->pushPageHeader(['create', 'parent_id' => $searchModel->pare
                 'childs'=> function ($url, $model) {
                     return Html::a(
                         '<i class="icon-tree5"></i>' . Yii::t('yii2admin', 'Подкатегории'),
-                        ['index', 'parent_id' => $model['id'], 'locale' => $model['locale']],
+                        ['index', 'parent_id' => $model['id']],
                         [
                             'class' => 'dropdown-item',
                             'aria-label' => Yii::t('yii2admin', 'Подменю'),
@@ -93,7 +93,7 @@ $this->viewHelper()->pushPageHeader(['create', 'parent_id' => $searchModel->pare
 
                     return Html::a(
                         '<i class="icon-pencil6"></i>'. Yii::t('yii2admin', 'Редактировать'),
-                        ['update', 'id' => $model['id'], 'locale' => $model['locale'], 'parent_id' => $model['parent_id']],
+                        ['update', 'id' => $model['id'],  'parent_id' => $model['parent_id']],
                         [
                             'class' => 'dropdown-item',
                             'aria-label' => Yii::t('yii2admin', 'Редактировать'),
@@ -113,7 +113,7 @@ $this->viewHelper()->pushPageHeader(['create', 'parent_id' => $searchModel->pare
 
                     return Html::a(
                         '<i class="icon-checkmark4"></i>'. Yii::t('yii2admin', 'Активировать'),
-                        ['status-change', 'id' => $model['id'], 'status' => StatusEnum::ACTIVE, 'locale' => $model['locale'], 'parent_id' => $model['parent_id']],
+                        ['status-change', 'id' => $model['id'], 'status' => StatusEnum::ACTIVE,  'parent_id' => $model['parent_id']],
                         [
                             'class' => 'admin-action dropdown-item',
                             'data-pjax-id' => 'list-pjax',
@@ -131,7 +131,7 @@ $this->viewHelper()->pushPageHeader(['create', 'parent_id' => $searchModel->pare
                     }
                     return Html::a(
                         '<i class="icon-cross2"></i>'. Yii::t('yii2admin', 'Деактивировать'),
-                        ['status-change', 'id' => $model['id'], 'status' => StatusEnum::INACTIVE, 'locale' => $model['locale'], 'parent_id' => $model['parent_id']],
+                        ['status-change', 'id' => $model['id'], 'status' => StatusEnum::INACTIVE, 'parent_id' => $model['parent_id']],
                         [
                             'class' => 'admin-action dropdown-item',
                             'data-pjax-id' => 'list-pjax',
@@ -147,7 +147,7 @@ $this->viewHelper()->pushPageHeader(['create', 'parent_id' => $searchModel->pare
 
                     return Html::a(
                         '<i class="icon-trash"></i>'. Yii::t('yii2admin', 'Удалить'),
-                        ['delete', 'id' => $model['id'], 'locale' => $model['locale'], 'parent_id' => $model['parent_id']],
+                        ['delete', 'id' => $model['id'], 'parent_id' => $model['parent_id']],
                         [
                             'class' => 'admin-action dropdown-item',
                             'data-pjax-id' => 'list-pjax',
