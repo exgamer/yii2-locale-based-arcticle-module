@@ -1,5 +1,5 @@
 {
-    "name": "concepture/yii2-article-module",
+    "name": "concepture/yii2-locale-based-article-module",
     "license": "MIT",
     "type": "yii2-extension",
     "description": "package under development",
