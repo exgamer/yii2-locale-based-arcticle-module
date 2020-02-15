@@ -99,13 +99,13 @@ class Post extends ActiveRecord
                     'string',
                     'max'=>1024
                 ],
-                [
-                    [
-                        'seo_name'
-                    ],
-                    UniqueLocalizedValidator::class,
-                    'localizedFields' => ['seo_name', 'locale_id']
-                ]
+                 [
+                     [
+                         'seo_name'
+                     ],
+                     \concepture\yii2logic\validators\v2\UniquePropertyValidator::class,
+                     'propertyFields' => ['seo_name', 'locale_id']
+                 ]
             ]
         );
 

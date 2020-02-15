@@ -103,8 +103,8 @@ class PostCategory extends ActiveRecord
                 [
                     'seo_name'
                 ],
-                UniqueLocalizedValidator::class,
-                'localizedFields' => ['seo_name', 'locale']
+                \concepture\yii2logic\validators\v2\UniquePropertyValidator::class,
+                'propertyFields' => ['seo_name', 'locale_id']
             ]
             ]
         );
