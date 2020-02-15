@@ -25,7 +25,6 @@ class m191005_101549_post extends Migration
             'is_deleted' => $this->smallInteger()->defaultValue(0),
         ]);
         $this->addIndex(['user_id']);
-        $this->addIndex(['domain_id']);
         $this->addIndex(['category_id']);
         $this->addIndex(['status']);
         $this->addIndex(['is_deleted']);

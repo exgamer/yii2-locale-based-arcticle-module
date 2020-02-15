@@ -28,7 +28,6 @@ class m191002_151217_post_category_table_localization extends Migration
         $this->addPK(['entity_id', 'locale_id'], true);
         $this->addIndex(['entity_id']);
         $this->addIndex(['locale_id']);
-        $this->addIndex(['url']);
         $this->addForeign('entity_id', 'post_category','id');
         $this->addForeign('locale_id', 'locale','id');
     }
