@@ -5,7 +5,6 @@ use concepture\yii2logic\models\traits\SeoTrait;
 use concepture\yii2logic\traits\SeoPropertyTrait;
 use concepture\yii2logic\validators\SeoNameValidator;
 use concepture\yii2user\models\User;
-use concepture\yii2logic\validators\UniquePropertyValidator;
 use Yii;
 use concepture\yii2logic\models\ActiveRecord;
 use concepture\yii2logic\validators\TranslitValidator;

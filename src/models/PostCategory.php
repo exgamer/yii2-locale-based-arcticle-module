@@ -3,7 +3,6 @@ namespace concepture\yii2article\models;
 
 use concepture\yii2logic\validators\SeoNameValidator;
 use concepture\yii2user\models\User;
-use concepture\yii2logic\validators\UniquePropertyValidator;
 use Yii;
 use concepture\yii2logic\models\ActiveRecord;
 use concepture\yii2logic\validators\TranslitValidator;
