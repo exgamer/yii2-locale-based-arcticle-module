@@ -61,8 +61,8 @@ class PostCategorySearch extends PostCategory
 
     public function extendDataProvider(ActiveDataProvider $dataProvider)
     {
-        $this->addSortByLocalizationAttribute($dataProvider, 'seo_name');
-        $this->addSortByLocalizationAttribute($dataProvider, 'title');
+        $this->addSortByPropertyAttribute($dataProvider, 'seo_name');
+        $this->addSortByPropertyAttribute($dataProvider, 'title');
     }
 
     public static function getListSearchKeyAttribute()
