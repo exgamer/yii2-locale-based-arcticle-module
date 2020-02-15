@@ -82,8 +82,8 @@ class PostService extends Service
                 );
             }
 
-            $query->andWhere([Match::tableName() . '.status' => StatusEnum::ACTIVE]);
-            $query->andWhere([Match::tableName() . '.is_deleted' => IsDeletedEnum::NOT_DELETED]);
+            $query->andWhere([$this->getTableName() . '.status' => StatusEnum::ACTIVE]);
+            $query->andWhere([$this->getTableName() . '.is_deleted' => IsDeletedEnum::NOT_DELETED]);
         });
     }
 }
